@@ -7,6 +7,9 @@
   <title>Anime Share</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/base.css" />
+
+  <script src="../js/jquery-3.5.1.min.js"></script>
+  <script src="../js/apiLookup.js" defer></script>
 </head>
 
 <body>
@@ -16,8 +19,8 @@
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">Anime Share</a>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success btn-custom me-2" type="submit">Search</button>
+        <input class="form-control me-2" id="inputNav" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success btn-custom me-2" id="searchNav" type="submit">Search</button>
       </form>
     </div>
     </div>
@@ -28,8 +31,8 @@
     <div class="col-6 center">
       <h1 class="text-white row justify-content-center mb-3">Search for Anime</h1>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success me-2" type="submit">Search</button>
+        <input class="form-control me-2" id="inputMain" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success me-2" id="searchMain" type="submit">Search</button>
       </form>
     </div>
   </div>
