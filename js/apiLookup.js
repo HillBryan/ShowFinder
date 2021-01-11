@@ -21,14 +21,15 @@ function queryAPI(query) {
 }
 
 function processResponse(response) {
-  removeContentLanding();
+  removeContent();
   response.forEach(result => {
     addCard(result);
   });
 }
 
-function removeContentLanding() {
+function removeContent() {
   $('.landing').remove();
+  $('.card').remove();
 }
 
 function addCard(result) {
