@@ -14,8 +14,30 @@ $('#searchMain').click(function() {
 
 //Pulling json data from api
 function queryAPI(query) {
-  console.log(base_url + query);
   fetch(base_url + query)
-  .then(response  => response.json())
-  .then(data => console.log(data.results));
+  .then(response => response.json())
+  .then(response => response.results)
+  .then(data => processResponse(data));
+}
+
+function processResponse(response) {
+  removeContentLanding();
+  response.forEach(result => {
+    addCard(result);
+  });
+}
+
+function removeContentLanding() {
+  $('.landing').remove();
+}
+
+function addCard(result) {
+  $('.cards').append('<div class="card" style="width: 18rem;"> \
+    <img class="card-img-top" src="' + result.image_url + '" alt="Card image cap"> \
+    <div class="card-body"> \
+      <h5 class="card-title">' + result.title + '</h5> \
+      <p class="card-text">' + result.synopsis + '</p> \
+      <a href="' + result.url + '" class="btn btn-primary">More Information</a> \
+    </div> \
+  </div>');
 }

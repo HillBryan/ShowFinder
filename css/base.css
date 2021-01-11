@@ -1,7 +1,3 @@
-* {
-  overflow: hidden;
-}
-
 body {
   background-color: black;
 }
@@ -14,7 +10,19 @@ body {
   padding-right: 25px;
 }
 
+.btn-custom1 {
+  padding-right: 25px;
+}
+
 .border-outline {
   border-bottom: 1px solid white;
+}
 
+.cards {
+  text-align: center;
+  margin: 1%;
+}
+
+.card {
+  margin: 20px;
 }
