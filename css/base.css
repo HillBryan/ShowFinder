@@ -1,7 +1,11 @@
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
+li {
+  margin-right: 2rem;
+}
 .navbar {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -30,4 +34,8 @@ body {
 
 .card {
   margin: 20px;
+}
+
+.icon {
+  margin-right: 5rem;
 }
