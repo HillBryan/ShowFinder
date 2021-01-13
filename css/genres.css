@@ -12,5 +12,6 @@
 
 .genres {
   margin: 2rem;
+  margin-top: 3rem;
   grid-area: "genres"
 }
