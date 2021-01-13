@@ -13,6 +13,7 @@ const genres = {"Action":1,"Adventure":2,"Cars":3,"Comedy":4,
 
 $(window).on('load', function() {
   addListGroup();
+  activateFistGenre();
 });
 
 
@@ -29,6 +30,11 @@ function addListGroup() {
     $(event.target).addClass('active');
     loadCards($(event.target).attr('val'));
   });
+}
+
+function activateFistGenre() {
+  $('.list-group-item:first-of-type').addClass('active');
+  loadCards($('.list-group-item:first-of-type').attr('val'));
 }
 
 function loadCards(genre_id) {
