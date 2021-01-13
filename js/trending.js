@@ -25,7 +25,7 @@ function addCardTrending(result) {
       <div class="card-body"> \
         <h5 class="card-title">' + result.title + '</h5> \
         <h5 class="card-title"> Rank: ' + result.rank + '</h5> \
-        <p class="card-text">Score: ' + result.score + '</p> \
+        <p class="card-text">Score: ' + result.score + ' / 10</p> \
         <a href="' + result.url + '" class="btn btn-primary">More Information</a> \
       </div> \
     </div>');

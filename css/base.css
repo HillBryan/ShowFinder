@@ -11,6 +11,10 @@ li {
   padding-bottom: 15px;
 }
 
+.navbar-brand {
+  margin-left: 1rem;
+}
+
 .center {
   margin: 15%;
 }
@@ -29,11 +33,18 @@ li {
 
 .cards {
   text-align: center;
-  margin: 1%;
+  margin-top: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .card {
   margin: 20px;
+}
+
+.cardsGenre {
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .icon {
