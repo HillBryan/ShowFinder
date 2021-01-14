@@ -1,17 +1,15 @@
-.content {
-  display: grid;
-  grid-template-columns: 1.5fr 6fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "genres card";
-}
-
-.cards {
-  grid-area: "card"
-}
-
 .genres {
   margin: 2rem;
-  margin-top: 3rem;
-  grid-area: "genres"
+  margin-top: 2%;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.border-primary {
+
+}
+
+.content {
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
