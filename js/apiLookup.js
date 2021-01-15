@@ -20,6 +20,12 @@ function processResponseSearch(response) {
 function removeContentSearch() {
   $('.landing').remove();
   $('.card').remove();
+
+  if ($('.genres')) {
+    $('.genres').remove();
+    $('.cards').removeClass('border');
+    $('.cards').removeClass('border-primary');
+  }
 }
 
 function addCardSearch(result) {

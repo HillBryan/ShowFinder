@@ -56,4 +56,17 @@ img {
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 40px #0A58BD;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+}
+
+.form-control:hover {
+  box-shadow: 0 0 50px #0A58BD;
 }

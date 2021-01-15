@@ -60,9 +60,11 @@ function addCardGenre(result) {
     '<div class="card" style="width: 18rem;"> \
       <img class="card-img-top" src="' + result.image_url + '" alt="Card image cap"> \
       <div class="card-body"> \
-        <h5 class="card-title">' + result.title + '</h5> \
-        <h5 class="card-title"> Episodes: ' + result.episodes + '</h5> \
+        <h5 class="card-title large">' + result.title + '</h5> \
+        <p class="card-title"> Episodes: ' + result.episodes + '</p> \
         <p class="card-text">Score: ' + result.score + ' / 10</p> \
+      </div> \
+      <div class="card-footer"> \
         <a href="' + result.url + '" class="btn btn-primary">More Information</a> \
       </div> \
     </div>');
