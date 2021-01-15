@@ -1,4 +1,4 @@
-const genre_endpoint = 'genre/anime/'
+const genre_endpoint = 'genre/anime/';
 const genres = {"Action":1,"Adventure":2,"Cars":3,"Comedy":4,
           "Dementia":5,"Demons":6,"Mystery":7,"Drama":8,
           "Fantasy":10,"Game":11,"Historical":13,"Horror":14,

@@ -11,35 +11,8 @@ function queryAPI(query) {
 }
 
 function processResponseSearch(response) {
-  removeContentSearch();
-  response.forEach(result => {
-    addCardSearch(result);
-  });
-}
-
-function removeContentSearch() {
-  $('.landing').remove();
-  $('.card').remove();
-
-  if ($('.genres')) {
-    $('.genres').remove();
-    $('.cards').removeClass('border');
-    $('.cards').removeClass('border-primary');
-  }
-}
-
-function addCardSearch(result) {
-  $('.cards').append(
-    '<div class="card" style="width: 18rem;"> \
-      <img class="card-img-top standard" src="' + result.image_url + '" alt="Card image cap"> \
-      <div class="card-body"> \
-        <h5 class="card-title">' + result.title + '</h5> \
-        <p class="card-text">' + result.synopsis + '</p> \
-      </div> \
-      <div class="card-footer"> \
-        <a href="' + result.url + '" class="btn btn-primary">More Information</a> \
-      </div> \
-    </div>');
+  sessionStorage.setItem('response', JSON.stringify(response));
+  window.location = '../html/results.html';
 }
 
 function addActionListeners() {
