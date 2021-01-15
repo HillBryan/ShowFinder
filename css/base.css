@@ -54,6 +54,20 @@ img {
   margin-right: 5rem;
 }
 
+strong {
+  font-size: large;
+}
+
+.large {
+  min-height: 3rem;
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 40px #0A58BD;

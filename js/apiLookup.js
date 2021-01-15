@@ -35,6 +35,8 @@ function addCardSearch(result) {
       <div class="card-body"> \
         <h5 class="card-title">' + result.title + '</h5> \
         <p class="card-text">' + result.synopsis + '</p> \
+      </div> \
+      <div class="card-footer"> \
         <a href="' + result.url + '" class="btn btn-primary">More Information</a> \
       </div> \
     </div>');
