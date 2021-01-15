@@ -58,7 +58,7 @@ function removeContentGenre() {
 function addCardGenre(result) {
   $('.cards').append(
     '<div class="card" style="width: 18rem;"> \
-      <img class="card-img-top" src="' + result.image_url + '" alt="Card image cap"> \
+      <img class="card-img-top standard" src="' + result.image_url + '" alt="Card image cap"> \
       <div class="card-body"> \
         <h5 class="card-title large">' + result.title + '</h5> \
         <p class="card-title"> Episodes: ' + result.episodes + '</p> \
