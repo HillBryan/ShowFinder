@@ -31,15 +31,15 @@ function fillJumbotronHeader(response) {
 
 function fillJumbotronBody(response) {
   $('.jumbotron-body').append(' \
-    <h1 class="jumbotron-item">' + response.title + '</h1><hr></hr> \
+    <h1 class="jumbotron-item"><strong>' + response.title + '</strong></h1><hr></hr> \
     <p class="jumbotron-item">' + response.synopsis + '</p> \
-    <h5 class="jumbotron-item">Episodes: ' + (response.episodes ?
+    <h5 class="jumbotron-item">Episodes:<strong> ' + (response.episodes ?
       response.episodes : 'Unknown') + '</h5> \
-    <h5 class="jumbotron-item">Rating: ' + response.rating + '</h5> \
-    <h5 class="jumbotron-item">Status: ' + response.status + '</h5> \
-    <h5 class="jumbotron-item">Duration: ' + response.aired.string + '</h5> \
-    <h5 class="jumbotron-item">Score: ' + response.score + '</h5> \
-    <h5 class="jumbotron-item">Rank: ' + response.rank + '</h5> \
-    <h5 class="jumbotron-item">Broadcast Time: ' + response.broadcast + '</h5> \
+    <h5 class="jumbotron-item">Rating:<strong> ' + response.rating + '</h5> \
+    <h5 class="jumbotron-item">Status:<strong> ' + response.status + '</h5> \
+    <h5 class="jumbotron-item">Duration:<strong> ' + response.aired.string + '</h5> \
+    <h5 class="jumbotron-item">Score:<strong> ' + response.score + '</h5> \
+    <h5 class="jumbotron-item">Rank:<strong> ' + response.rank + '</h5> \
+    <h5 class="jumbotron-item">Broadcast Time:<strong> ' + response.broadcast + '</h5> \
   ');
 }
