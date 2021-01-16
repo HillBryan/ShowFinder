@@ -20,8 +20,8 @@
 .jumbotron-img {
   margin: 2rem;
   border-radius: 10px;
-  width: 350px;
-  height: 500px;
+  width: 325px;
+  height: 475px;
   object-fit: cover;
 }
 
@@ -30,4 +30,8 @@
   display: border;
   border: 1px solid #0A58BD;
   box-shadow: 0 0 65px #0A58BD;
+}
+ 
+.title {
+  font-size: 120%;
 }

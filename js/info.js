@@ -31,7 +31,7 @@ function fillJumbotronHeader(response) {
 
 function fillJumbotronBody(response) {
   $('.jumbotron-body').append(' \
-    <h1 class="jumbotron-item"><strong>' + response.title + '</strong></h1><hr></hr> \
+    <h1 class="jumbotron-item"><strong class="title">' + response.title + '</strong></h1><hr></hr> \
     <p class="jumbotron-item">' + response.synopsis + '</p> \
     <h5 class="jumbotron-item">Episodes:<strong> ' + (response.episodes ?
       response.episodes : 'Unknown') + '</h5> \
