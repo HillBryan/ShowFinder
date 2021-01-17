@@ -2,24 +2,46 @@
 //use anime/{id} endppint to get everything
 const anime_search_by_id_endpoint = 'anime/'
 
-
-$(window).on('load', function() {
-  deleteOldData();
-  console.log(sessionStorage.getItem('id'));
-  loadData(sessionStorage.getItem('id'));
+//Error handling, if no selection made.
+$(document).ready(function() {
+  if (!(sessionStorage.getItem('id'))) {
+    window.location = "../html/landingPage.html"
+  }
 });
 
-function deleteOldData() {
-  $('jumbotron-item').remove();
-}
+//Loading content on
+$(window).on('load', function() {
+  loadSpinner();
+  loadData(sessionStorage.getItem('id'));
+});
 
 function loadData(id) {
   fetch(base_url + anime_search_by_id_endpoint + id)
   .then(response => response.json())
   .then(response => {
-    fillJumbotronHeader(response);
+    removeSpinner();
+    fillContainer();
     fillJumbotronBody(response);
+    fillJumbotronHeader(response);
+
   });
+}
+
+function loadSpinner() {
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner">');
+}
+
+function removeSpinner() {
+  $('.spinner').remove();
+}
+
+function fillContainer() {
+  $('.containter').append(' \
+    <div class="jumbotron d-flex col-md-9 border-custom"> \
+      <div class="jumbotron-header d-flex"></div> \
+      <div class="jumbotron-body"></div> \
+    </div> \
+  ');
 }
 
 function fillJumbotronHeader(response) {

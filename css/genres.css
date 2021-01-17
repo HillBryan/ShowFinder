@@ -14,3 +14,8 @@
   border-radius: 10px;
   box-shadow: 0 0 25px #0A58BD;
 }
+
+.spinner {
+  margin-right: 30rem;
+  margin-left: 30rem;
+}

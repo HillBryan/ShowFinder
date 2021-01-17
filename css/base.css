@@ -69,6 +69,12 @@ strong {
   -webkit-box-orient: vertical;
 }
 
+.spinner {
+  width: 217px;
+  height: 217px;
+  margin: 5rem;
+}
+
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);

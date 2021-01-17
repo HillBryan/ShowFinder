@@ -1,15 +1,16 @@
 $(window).on('load', function() {
+  loadSpinner();
   loadCards(JSON.parse(sessionStorage.getItem('response')));
 });
 
 function loadCards(response) {
-  $('.card').remove();
 
   response.forEach(result => {
     addCardSearch(result);
   });
 
   addCardFunction();
+  removeSpinner();
 }
 
 function addCardSearch(result) {
@@ -34,4 +35,14 @@ function addCardFunction() {
     sessionStorage.setItem('id', $(event.target).attr('id'));
     window.location = '../html/info.html';
   });
+}
+
+function loadSpinner() {
+  $('.card').css('display', 'none');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
+}
+
+function removeSpinner() {
+  $('.spinner').remove();
+  $('.card').css('display', 'flex');
 }

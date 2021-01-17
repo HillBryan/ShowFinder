@@ -38,6 +38,8 @@ function activateFistGenre() {
 }
 
 function loadCards(genre_id) {
+  loadSpinner();
+
   fetch(base_url + genre_endpoint + genre_id)
   .then(response => response.json())
   .then(response => response.anime)
@@ -46,11 +48,13 @@ function loadCards(genre_id) {
 
 function processResponseGenre(response) {
   removeContentGenre();
+
   response.forEach(result => {
     addCardGenre(result);
   });
 
   addCardFunction();
+  removeSpinner();
 }
 
 function removeContentGenre() {
@@ -81,4 +85,14 @@ function addCardFunction() {
     sessionStorage.setItem('id', $(event.target).attr('id'));
     window.location = '../html/info.html';
   });
+}
+
+function loadSpinner() {
+  $('.card').css('display', 'none');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
+}
+
+function removeSpinner() {
+  $('.spinner').remove();
+  $('.card').css('display', 'flex');
 }

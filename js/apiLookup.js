@@ -24,6 +24,7 @@ function addActionListeners() {
 
   //Search main content event listener
   $('#searchMain').click(function() {
+    loadSpinnerSearchMain();
     let queryParam = $('#inputMain').val();
     queryAPI(queryParam);
   });
@@ -40,9 +41,17 @@ function addActionListeners() {
   //Main search bar 'enter' functionality
   $('#inputMain').keypress(function() {
     if (event.which == 13) {
+      loadSpinnerSearchMain();
       event.preventDefault();
       let queryParam = $('#inputMain').val();
       queryAPI(queryParam);
     }
   });
+}
+
+//Decide about search mini location
+
+function loadSpinnerSearchMain() {
+  $('.spin-remove').css('display', 'none');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
 }

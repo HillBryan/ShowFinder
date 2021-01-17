@@ -1,6 +1,9 @@
 const trending_endpoint = 'top/anime/1/airing';
 
 $( window ).on('load', function() {
+
+  loadSpinner();
+
   fetch(base_url + trending_endpoint)
   .then(response => response.json())
   .then(response => response.top)
@@ -8,15 +11,11 @@ $( window ).on('load', function() {
 });
 
 function processResponseTrending(response) {
-  removeContentTrending();
   response.forEach(result => {
     addCardTrending(result);
   });
   addCardFunction();
-}
-
-function removeContentTrending() {
-  $('.card').remove();
+  removeSpinner();
 }
 
 function addCardTrending(result) {
@@ -45,4 +44,14 @@ function addCardFunction() {
     sessionStorage.setItem('id', $(event.target).attr('id'));
     window.location = '../html/info.html';
   });
+}
+
+function loadSpinner() {
+  $('.card').css('display', 'none');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
+}
+
+function removeSpinner() {
+  $('.spinner').remove();
+  $('.card').css('display', 'flex');
 }
