@@ -8,10 +8,10 @@
   <script src="../imports/jquery-3.5.1.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/genres.css" />
 
   <script src="../js/apiLookup.js" defer></script>
-  <script src="../js/results.js" defer></script>
-
+  <script src="../js/schedule.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="./genres.html">Genres <span class="sr-only"></span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./schedule.html">Release Schedule<span class="sr-only"></span></a>
+            <a class="nav-link" href="#">Release Schedule<span class="sr-only"></span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="./landingPage.html">Recommendations <span class="sr-only"></span></a>
@@ -46,8 +46,16 @@
     </div>
   </nav>
 
-  <!--Cards div-->
-  <div class='cards row justify-content-center md-7 spin-add'>
+  <div class="content d-flex justify-content-center">
+    <!--List group-->
+    <div class="list-group genres border border-primary col-md-2">
+    </div>
+
+    <!--Cards div-->
+    <div class='card-deck cards border border-primary row col-md
+    justify-content-center spin-add'>
+    </div>
+  </div>
 
 </body>
 
