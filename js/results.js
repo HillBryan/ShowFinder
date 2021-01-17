@@ -39,7 +39,7 @@ function addCardFunction() {
 
 function loadSpinner() {
   $('.card').css('display', 'none');
-  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner">');
 }
 
 function removeSpinner() {

@@ -53,5 +53,5 @@ function addActionListeners() {
 
 function loadSpinnerSearchMain() {
   $('.spin-remove').css('display', 'none');
-  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner" style="height=212px; width=212px;">');
+  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner">');
 }
