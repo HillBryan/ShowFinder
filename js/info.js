@@ -6,7 +6,7 @@ const week = ['Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Satu
 //Error handling, if no selection made.
 $(document).ready(function() {
   if (!(sessionStorage.getItem('id'))) {
-    window.location = "../html/landingPage.html"
+    window.location = "../html/landing.html"
   }
 });
 
