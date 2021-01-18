@@ -1,6 +1,6 @@
 const genre_endpoint = 'schedule/';
-const week = ["Monday", "Tuesday", "wednesday", "thursday", "friday",
-                "saturday", "sunday", "other", "unknown"];
+const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                "Saturday", "Sunday", "Other", "Unknown"];
 
 
 $(window).on('load', function() {
