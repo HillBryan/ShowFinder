@@ -71,7 +71,7 @@ function fillJumbotronBody(response) {
 
 function addESTBroadcast(broadcast) {
   const dateSplit = broadcast.split(' ');
-  let index = week.indexOf(dateSplit[1]);
+  let index = week.indexOf(dateSplit[0]);
   const timeSplit = dateSplit[2].split(':');
 
   let timeMin = (parseInt(timeSplit[0]) * 60) + parseInt(timeSplit[1]);
