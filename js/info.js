@@ -1,6 +1,7 @@
 //Get mal_id with jquery
 //use anime/{id} endppint to get everything
 const anime_search_by_id_endpoint = 'anime/'
+const week = ['Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays', 'Sundays']
 
 //Error handling, if no selection made.
 $(document).ready(function() {
@@ -23,7 +24,6 @@ function loadData(id) {
     fillContainer();
     fillJumbotronBody(response);
     fillJumbotronHeader(response);
-
   });
 }
 
@@ -55,13 +55,38 @@ function fillJumbotronBody(response) {
   $('.jumbotron-body').append(' \
     <h1 class="jumbotron-item"><strong class="title">' + response.title + '</strong></h1><hr></hr> \
     <p class="jumbotron-item">' + response.synopsis + '</p> \
+    <h5 class="jumbotron-item">Rank:<strong> ' + response.rank + '</h5> \
+    <h5 class="jumbotron-item">Score:<strong> ' + response.score + ' / 10</h5> \
     <h5 class="jumbotron-item">Episodes:<strong> ' + (response.episodes ?
       response.episodes : 'Unknown') + '</h5> \
+    <h5 class="jumbotron-item">Duration:<strong> ' + response.duration + '</h5> \
     <h5 class="jumbotron-item">Rating:<strong> ' + response.rating + '</h5> \
     <h5 class="jumbotron-item">Status:<strong> ' + response.status + '</h5> \
     <h5 class="jumbotron-item">Duration:<strong> ' + response.aired.string + '</h5> \
-    <h5 class="jumbotron-item">Score:<strong> ' + response.score + '</h5> \
-    <h5 class="jumbotron-item">Rank:<strong> ' + response.rank + '</h5> \
+    <h5 class="jumbotron-item">Premiered:<strong> ' + response.premiered + '</h5> \
     <h5 class="jumbotron-item">Broadcast Time:<strong> ' + response.broadcast + '</h5> \
+    <h5 class="jumbotron-item">Broadcast Time (EST):<strong> ' + addESTBroadcast(response.broadcast) + '</h5> \
   ');
+}
+
+function addESTBroadcast(broadcast) {
+  const dateSplit = broadcast.split(' ');
+  let index = week.indexOf(dateSplit[1]);
+  const timeSplit = dateSplit[2].split(':');
+
+  let timeMin = (parseInt(timeSplit[0]) * 60) + parseInt(timeSplit[1]);
+  const difference =  14 * 60;
+
+  let newTime = timeMin - difference;
+  index = index - 1 < 0 ? (week.length - 1) : index - 1;
+
+  if (newTime < 0) {
+    newTime += (24 * 60);
+  }
+
+  let returnString = ((newTime / 60 | 0) + ':' + (newTime % 60));
+
+  return week[index] + ' at ' + returnString;
+
+
 }
