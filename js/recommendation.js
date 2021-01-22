@@ -3,6 +3,10 @@ const endpoint_anime = 'anime/'
 const endpoint_rec = '/recommendations';
 addActionListeners();
 
+$(window).on('load', function() {
+  $('.cards').hide();
+});
+
 function searchAPI(queryParam) {
   $('.error').remove();
   fetch(base_url + search_endpoint + queryParam)
@@ -59,6 +63,7 @@ function appendErrorMessage(data) {
 function addActionListeners() {
   //Search main content event listener
   $('#search-rec').click(function() {
+    $('.cards').show();
     loadSpinner();
     let queryParam = $('#input-rec').val();
     searchAPI(queryParam);
@@ -67,6 +72,8 @@ function addActionListeners() {
   //Nav Search bar 'enter' key functionality.
   $('#input-rec').keypress(function() {
     if (event.which == 13) {
+      $('.cards').show();
+      loadSpinner();
       event.preventDefault();
       let queryParam = $('#input-rec').val();
       searchAPI(queryParam);
