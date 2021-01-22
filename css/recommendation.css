@@ -1,5 +1,6 @@
 .container {
   flex-wrap: wrap;
+  min-width: 90%;
 }
 
 .search {
@@ -7,7 +8,6 @@
 }
 
 .cards {
-
   align-items: flex-end;
 }
 
@@ -17,4 +17,13 @@
 
 .cards {
   margin: 2%;
+}
+
+.above-text {
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.error {
+  padding: 5%;
 }
