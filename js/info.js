@@ -72,23 +72,26 @@ function fillJumbotronBody(response) {
 }
 
 function addESTBroadcast(broadcast) {
-  const dateSplit = broadcast.split(' ');
-  let index = week.indexOf(dateSplit[0]);
-  const timeSplit = dateSplit[2].split(':');
+  if (broadcast && broadcast.length > 0) {
+    const dateSplit = broadcast.split(' ');
+    let index = week.indexOf(dateSplit[0]);
+    const timeSplit = dateSplit[2].split(':');
 
-  let timeMin = (parseInt(timeSplit[0]) * 60) + parseInt(timeSplit[1]);
-  const difference =  14 * 60;
+    let timeMin = (parseInt(timeSplit[0]) * 60) + parseInt(timeSplit[1]);
+    const difference =  14 * 60;
 
-  let newTime = timeMin - difference;
-  index = index - 1 < 0 ? (week.length - 1) : index - 1;
+    let newTime = timeMin - difference;
+    index = index - 1 < 0 ? (week.length - 1) : index - 1;
 
-  if (newTime < 0) {
-    newTime += (24 * 60);
+    if (newTime < 0) {
+      newTime += (24 * 60);
+    }
+
+    let returnString = ((newTime / 60 | 0) + ':' + (newTime % 60));
+
+    return week[index] + ' at ' + returnString;
   }
 
-  let returnString = ((newTime / 60 | 0) + ':' + (newTime % 60));
-
-  return week[index] + ' at ' + returnString;
 
 
 }
