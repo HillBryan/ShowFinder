@@ -28,7 +28,9 @@ function loadData(id) {
 }
 
 function loadSpinner() {
-  $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner">');
+  if ($('.spinner').length == 0) {
+    $('.spin-add').append('<img class="spinner" src="../assets/spinner.gif" alt="Spinner">');
+  }
 }
 
 function removeSpinner() {
