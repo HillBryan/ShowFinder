@@ -1,1 +1,20 @@
- 
+.container {
+  flex-wrap: wrap;
+}
+
+.search {
+  align-items: flex-start;
+}
+
+.cards {
+
+  align-items: flex-end;
+}
+
+.center {
+  margin: 2%;
+}
+
+.cards {
+  margin: 2%;
+}
